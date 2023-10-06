@@ -83,7 +83,7 @@ body.dark{
     z-index: 100;  
 }
 .sidebar.close{
-    width: 88px;
+    width: 80px;
 }
 
 /* ===== Reusable code - Here ===== */
@@ -352,3 +352,135 @@ body.dark .switch::before{
 body.dark .home .text{
     color: var(--text-color);
 }
+.gebruiker{
+    background-color: rgb(225, 222, 236);
+    padding-left: 6em;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+
+
+}
+
+.ul-blok{
+
+    /* scrol element maken */
+    display: block;
+    overflow-x: scroll;
+  
+
+}
+
+.boek-blok{
+
+    /* li voor de boeken  */
+    list-style-type: none;
+
+    /* grid gebruiken zodat de tekst en de image goed
+    naast erlkaar staan */
+    display:grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows:1fr ;
+    grid-template-areas:
+    "image tekst";
+
+    /* opmaak  */
+    background-color: rgb(201, 202, 202);
+    height: 15em;
+    width: 23em;
+    margin-top: 1em;
+    margin-left: 2em;
+    margin-bottom: 3em ;
+   
+    
+
+}
+
+
+p{
+    /* tekts info van boek */
+    grid-area: tekst;
+    background-color: rgb(255, 255, 255);
+    width: 10em;
+    padding-left: 2em;
+    padding-top: 2em;
+    
+}
+.image-boek{
+    /* plaatje van het boek */
+    grid-area: image;
+    object-fit: cover;
+    height: 15em;
+    width: 10em;
+
+}
+
+h1{
+    font-style: bold;
+    padding-left: 3em;
+    font-size: 25px;
+    margin: 1em;
+    
+    
+}
+h4 {
+    max-width: 20em;
+    user-select: none;
+    padding: 10px;
+    margin: 0;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ul-simpel{
+    list-style-type: none;
+    padding: 0;
+    display: none;
+}
+
+#toggle-icon{
+
+    font-weight: bold;
+}
+
+.ul-simpel li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+/* mobile */
+@media(max-width:767px){
+    /* 1 kolom */
+}
+
+/* tablet */
+@media(min-width:768px ) and (max-width:1279px){
+    .ul-blok{
+        flex-wrap: wrap;
+       
+    }
+}
+    
+   
+
+
+/* desktop */
+@media(min-width:1280px){
+    .ul-blok{
+        display: flex;
+        overflow-x:scroll;
+    }
+    h1{
+        font-size: 30px;
+        padding-left:16em ;
+    }
+
+/*  */
+
+
+}
+
