@@ -76,7 +76,7 @@ body.dark{
     top: 0;
     left: 0;
     height: 100%;
-    width: 250px;
+    width: 280px;
     padding: 10px 14px;
     background: var(--sidebar-color);
     transition: var(--tran-05);
@@ -351,27 +351,24 @@ body.dark .switch::before{
 }
 body.dark .home .text{
     color: var(--text-color);
+
 }
+
+/* MIJN CODE BEGINT HIER */
+
 .gebruiker{
     background-color: rgb(225, 222, 236);
-    padding-left: 6em;
-    padding-bottom: 2em;
+    padding:0 6em 2em; 
     margin-bottom: 2em;
-
-
 }
 
 .ul-blok{
-
     /* scrol element maken */
     display: block;
     overflow-x: scroll;
-  
-
 }
 
 .boek-blok{
-
     /* li voor de boeken  */
     list-style-type: none;
 
@@ -387,41 +384,33 @@ body.dark .home .text{
     background-color: rgb(201, 202, 202);
     height: 15em;
     width: 23em;
-    margin-top: 1em;
-    margin-left: 2em;
-    margin-bottom: 3em ;
-   
-    
-
+    margin:1em 2em 3em ;
 }
 
-
+  /* tekts info van boek */
 p{
-    /* tekts info van boek */
     grid-area: tekst;
     background-color: rgb(255, 255, 255);
     width: 10em;
-    padding-left: 2em;
-    padding-top: 2em;
-    
+    padding:2em 2em;
+ 
 }
+
+/* plaatje van het boek */
 .image-boek{
-    /* plaatje van het boek */
     grid-area: image;
     object-fit: cover;
     height: 15em;
     width: 10em;
-
 }
 
 h1{
     font-style: bold;
     padding-left: 3em;
     font-size: 25px;
-    margin: 1em;
-    
-    
+    margin: 1em;   
 }
+
 h4 {
     max-width: 20em;
     user-select: none;
@@ -434,6 +423,7 @@ h4 {
     justify-content: space-between;
     align-items: center;
 }
+
 .ul-simpel{
     list-style-type: none;
     padding: 0;
@@ -441,7 +431,6 @@ h4 {
 }
 
 #toggle-icon{
-
     font-weight: bold;
 }
 
@@ -450,24 +439,20 @@ h4 {
     border-bottom: 1px solid #ddd;
 }
 
-
-
 /* mobile */
 @media(max-width:767px){
-    /* 1 kolom */
+    .sidebar{
+        display: none;
+    }
 }
 
 /* tablet */
 @media(min-width:768px ) and (max-width:1279px){
     .ul-blok{
         flex-wrap: wrap;
-       
     }
 }
     
-   
-
-
 /* desktop */
 @media(min-width:1280px){
     .ul-blok{
@@ -478,9 +463,5 @@ h4 {
         font-size: 30px;
         padding-left:16em ;
     }
-
-/*  */
-
-
 }
 
