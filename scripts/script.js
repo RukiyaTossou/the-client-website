@@ -43,3 +43,11 @@ function toggleList(toggleIconId, listId) {
         icon.innerText = "+"; // kan op worden geklik om het weer te laten zien 
     }
 }
+
+// Hamburger menu
+const toggleButton = document.querySelector('.toggle-button');
+const Sidebar = document.querySelector('.sidebar');
+
+toggleButton.addEventListener('click', () => {
+    Sidebar.classList.toggle('active');
+});

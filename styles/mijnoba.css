@@ -39,7 +39,8 @@
     --primary-color: #FF0000;
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
-    --text-color: #707070;
+    --text-color: #020024;
+  
 
     /* ====== Transition ====== */
     --tran-03: all 0.2s ease;   
@@ -51,7 +52,7 @@
 
 body{
     min-height: 100vh;
-    background-color: var(--body-color);
+    background-color: white;
     transition: var(--tran-05);
     font-family: AvenirMedium;
 }
@@ -80,11 +81,12 @@ body.dark{
     padding: 10px 14px;
     background: var(--sidebar-color);
     transition: var(--tran-05);
-    z-index: 100;  
+    z-index: 100;
+    
 }
-.sidebar.close{
+/* .sidebar.close{
     width: 80px;
-}
+} */
 
 /* ===== Reusable code - Here ===== */
 .sidebar li{
@@ -109,6 +111,7 @@ body.dark{
     align-items: center;
     justify-content: center;
     font-size: 20px;
+    
 }
 
 .sidebar .text,
@@ -123,14 +126,15 @@ body.dark{
     white-space: nowrap;
     opacity: 1;
 }
-.sidebar.close .text{
+/* .sidebar.close .text{
     opacity: 0;
-}
+} */
 
 .sidebar .text-long,
 .sidebar .icon{
     color: var(--text-color);
     transition: var(--tran-03);
+    color: red;
 }
 
 .sidebar .text-long{
@@ -203,9 +207,9 @@ body.dark .sidebar header .toggle{
     color: var(--text-color);
 }
 
-.sidebar.close .toggle{
+/* .sidebar.close .toggle{
     transform: translateY(-50%) rotate(0deg);
-}
+} */
 
 .sidebar .menu{
     margin-top: 18px;
@@ -357,15 +361,18 @@ body.dark .home .text{
 /* MIJN CODE BEGINT HIER */
 
 .gebruiker{
-    background-color: rgb(225, 222, 236);
-    padding:0 6em 2em; 
+    background-color:#d6dade;
+    padding:0 2em 2em; 
     margin-bottom: 2em;
+    border-bottom: solid;
+    border-color: red;
 }
 
 .ul-blok{
     /* scrol element maken */
     display: block;
     overflow-x: scroll;
+   
 }
 
 .boek-blok{
@@ -381,9 +388,10 @@ body.dark .home .text{
     "image tekst";
 
     /* opmaak  */
+
     background-color: rgb(201, 202, 202);
     height: 15em;
-    width: 23em;
+    max-width: 20em;
     margin:1em 2em 3em ;
 }
 
@@ -407,8 +415,11 @@ p{
 h1{
     font-style: bold;
     padding-left: 3em;
-    font-size: 25px;
-    margin: 1em;   
+    font-size: 25px; 
+    color: white;
+    background-color: red;
+    width: 100%;
+  
 }
 
 h4 {
@@ -422,6 +433,7 @@ h4 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .ul-simpel{
@@ -430,31 +442,75 @@ h4 {
     display: none;
 }
 
-#toggle-icon{
-    font-weight: bold;
+.toggle-button {
+    position: relative; /* Change 'absolute' to 'relative' */
+    background-color: white;
+    display: flex; /* Add display: flex */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.7em;
+    height: 3em;
+    padding-left: 0.3em;
+    cursor: pointer; /* Add a cursor style to indicate interactivity */
 }
 
-.ul-simpel li {
-    padding: 5px 0;
-    border-bottom: 1px solid #ddd;
+.bar {
+    height:0.4em;
+    width: 2.4em;
+    background-color:red;
+    border-radius: 3px; /* Half of the height to maintain even thickness */
+    margin: 5px 0;
+         /* Add margin to control vertical spacing (4px top and bottom) */
 }
+/* .image-text{
+    background-color: red;
+} */
 
 /* mobile */
 @media(max-width:767px){
+    
     .sidebar{
         display: none;
+        position: absolute;
+        top: 3em;
+     
+        
+    }
+    .sidebar.active{
+        display: block;
+    }
+    .sidebar header .toggle{
+        display: none;
+        
     }
 }
 
 /* tablet */
 @media(min-width:768px ) and (max-width:1279px){
-    .ul-blok{
+    .ul-blok{   
         flex-wrap: wrap;
+    }
+    .sidebar{
+        display: none;
+        position: absolute;
+        top: 3em;
+     
+        
+    }
+    .sidebar.active{
+        display: block;
+    }
+    .sidebar header .toggle{
+        display: none;
+        
     }
 }
     
 /* desktop */
 @media(min-width:1280px){
+    .gebruiker{
+        padding: 0 7em 3em;
+    }
     .ul-blok{
         display: flex;
         overflow-x:scroll;
@@ -462,6 +518,19 @@ h4 {
     h1{
         font-size: 30px;
         padding-left:16em ;
+        margin: 1em;
     }
+    .sidebar.close .text{
+    opacity: 0;
+}
+    .sidebar.close{
+    width: 80px;
+}
+    .sidebar.close .toggle{
+    transform: translateY(-50%) rotate(0deg);
+}
+
+    
+
 }
 
