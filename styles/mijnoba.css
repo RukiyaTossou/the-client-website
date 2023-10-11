@@ -26,7 +26,7 @@
 } */
 
 *{
-    margin: 0;
+    margin: ;
     padding: 0;
     box-sizing: border-box;
     /* font-family: 'Poppins', sans-serif; */
@@ -52,7 +52,7 @@
 
 body{
     min-height: 100vh;
-    background-color: white;
+    background-color: var(--body-color);
     transition: var(--tran-05);
     font-family: AvenirMedium;
 }
@@ -134,7 +134,7 @@ body.dark{
 .sidebar .icon{
     color: var(--text-color);
     transition: var(--tran-03);
-    color: red;
+    color: var(--primary-color);
 }
 
 .sidebar .text-long{
@@ -260,7 +260,7 @@ body.dark .sidebar li a:hover .text{
 }
 
 .sidebar .menu-bar{
-    height: calc(100% - 55px);
+    height: calc(100% - 7em);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -349,7 +349,7 @@ body.dark .switch::before{
 }
 
 .sidebar.close ~ .home{
-    left: 78px;
+    left: 3.4em;
     height: 100vh;
     width: calc(100% - 78px);
 }
@@ -361,11 +361,11 @@ body.dark .home .text{
 /* MIJN CODE BEGINT HIER */
 
 .gebruiker{
-    background-color:#d6dade;
+    background-color:var(--primary-color-light);
     padding:0 2em 2em; 
     margin-bottom: 2em;
     border-bottom: solid;
-    border-color: red;
+    border-color: var(--primary-color);
 }
 
 .ul-blok{
@@ -399,7 +399,7 @@ body.dark .home .text{
 p{
     grid-area: tekst;
     background-color: rgb(255, 255, 255);
-    width: 10em;
+    min-width: 10em;
     padding:2em 2em;
  
 }
@@ -417,7 +417,7 @@ h1{
     padding-left: 3em;
     font-size: 25px; 
     color: white;
-    background-color: red;
+    background-color: var(--primary-color);
     width: 100%;
   
 }
@@ -444,7 +444,7 @@ h4 {
 
 .toggle-button {
     position: relative; /* Change 'absolute' to 'relative' */
-    background-color: white;
+    background-color: var(--primary-color-light);
     display: flex; /* Add display: flex */
     flex-direction: column;
     justify-content: space-between;
@@ -457,7 +457,7 @@ h4 {
 .bar {
     height:0.4em;
     width: 2.4em;
-    background-color:red;
+    background-color:var(--primary-color);
     border-radius: 3px; /* Half of the height to maintain even thickness */
     margin: 5px 0;
          /* Add margin to control vertical spacing (4px top and bottom) */
@@ -471,10 +471,11 @@ h4 {
     
     .sidebar{
         display: none;
-        position: absolute;
-        top: 3em;
-     
-        
+        position: fixed;
+        top: 3em; 
+    }
+    .toggle-button{
+        position: fixed;
     }
     .sidebar.active{
         display: block;
@@ -483,6 +484,7 @@ h4 {
         display: none;
         
     }
+    
 }
 
 /* tablet */
@@ -492,10 +494,11 @@ h4 {
     }
     .sidebar{
         display: none;
-        position: absolute;
-        top: 3em;
-     
-        
+        position:fixed;
+        top: 3em;  
+    }
+    .toggle-button{
+        position: fixed;
     }
     .sidebar.active{
         display: block;
