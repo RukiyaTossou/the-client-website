@@ -370,7 +370,7 @@ body.dark .home .text{
 
 .ul-blok{
     /* scrol element maken */
-    display: block;
+    display: flex;
     overflow-x: scroll;
    
 }
@@ -533,4 +533,3 @@ h4 {
     
 
 }
-
