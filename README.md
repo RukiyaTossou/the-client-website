@@ -1,5 +1,5 @@
-# Mijn oba
-Ontwerp en maak een interactieve website voor een opdrachtgever.
+# Mijn oba.
+Familie overzicht ontwerpen 
 
 ## in
   * [Beschrijving](#Beschrijving)
@@ -8,7 +8,7 @@ Ontwerp en maak een interactieve website voor een opdrachtgever.
   * [](#)
 
 ## User Story
-> Als oba-lid wil ik op de website een familie overzicht te zien krijgen,  met het uileengeschiedenis van alle familileden.
+> Als oba-lid wil ik op de website een familie overzicht te zien krijgen,  met het uitleengeschiedenis van alle familileden.
 
 ## Beschrijving
 
