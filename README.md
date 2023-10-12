@@ -8,7 +8,7 @@ Familie overzicht ontwerpen
   * [](#)
 
 ## User Story
-> Als oba-lid wil ik op de website een familie overzicht te zien krijgen,  met het uitleengeschiedenis van alle familileden.
+> Als oba-lid wil ik op de website een familie overzicht te zien krijgen,  met een uitleengeschiedenis van alle familileden.
 
 ## Beschrijving
 
