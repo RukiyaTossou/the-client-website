@@ -389,17 +389,19 @@ body.dark .home .text{
 
     /* opmaak  */
 
-    background-color: rgb(201, 202, 202);
+  
     height: 15em;
     max-width: 20em;
     margin:1em 2em 3em ;
 }
 
   /* tekts info van boek */
-p{
+  p{
     grid-area: tekst;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--sidebar-color);
+    height: 15em;
     min-width: 10em;
+    margin-top: -0.1em;
     padding:2em 2em;
  
 }
